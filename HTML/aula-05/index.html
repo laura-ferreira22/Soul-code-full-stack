@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+</head>
+
+<body>
+
+    <h1>Formulário das Forças Armadas do Brasil</h1>
+
+    <form id="formulario" action="#" method="post" style="display:flex;flex-direction:column;align-items:start;gap:10px">
+
+        <label for="nome">Nome completo:</label>
+        <input type="text" name="nome" id="nome" required value="Fulano de tal" placeholder="Digite seu nome completo"/>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required placeholder= "seuemail@exemplo.com"/>
+
+        <label for="altura">Altura (cm):</label>
+        <input type="number" name="altura" id="altura" required value="1.68" min="0" max="400"/>
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" required minlength="8" maxlength="50" />
+
+
+        <label for="resumo">Resumo de vida:</label>
+        <textarea name="resumo" id="resumo" cols="30" rows="3">Digite um pouco sobre a sua história</textarea>
+
+        <label >Formação </label>
+        <div>
+            <input type="radio" name="formacao" id="exercito" value="Exército"> <label for="exercito">Exército</label>
+        </div>
+        <div>
+            <input type="radio"  name="formacao" id="marinha" value="Marinha" checked> <label for="marinha">Marinha</label>
+        </div>
+        <div><input type="radio"  name="formacao" id="aeronautica" value="Aeronáutica" > <label for="aeronautica">Aeronáutica</label>
+        </div>
+     
+        <label >Interesses:</label>
+        <div>
+            <input type="checkbox" name="interesse" id="atirador" value="Atirador"> <label for="atirador">Atirador</label>
+        </div>
+        <div>
+            <input type="checkbox" name="interesse" id="mergulhador" value="Mergulhador"> <label for="mergulhador">Mergulhador</label>
+        </div>
+        <div>
+            <input type="checkbox" name="interesse" id="piloto" value="Piloto"> <label for="piloto">Piloto</label>
+        </div>
+        <div>
+            <input type="checkbox" name="interesse" id="medico" value="Médico "checked> <label for="medico">Médico</label>
+        </div>
+
+
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado" >
+            <option value="" selected disabled>Selecione o estado</option> <!-- Placeholder option -->
+            <optgroup label="Nordeste">
+                <option value="CE"> Ceará</option>
+            </optgroup>
+            <optgroup label="Centro-Oeste e Sudeste">
+                <option value="SP"> São Paulo</option>
+                <option selected value="RJ" > Rio de Janeiro</option>
+                <option value="MG"> Minas Gerais</option>
+            </optgroup>
+            <optgroup label="Sul">
+                <option value="RS"> Rio Grande do Sul</option>
+                <option value="PR"> Paraná</option>
+                <option value="SC"> Santa Catarina</option>
+            </optgroup>
+        </select>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXX-XXXX"/>
+
+        <label for="dataNascimento"> Data de nascimento</label>
+        <input type="date" name="dataNascimento" id="dataNascimento" value="2000-01-01"/>
+
+        <label for="horaNascimento"> Horário de nascimento</label>
+        <input type="time" name="horaNascimento" id="horaNascimento">
+
+        <label for="foto">Foto 3x4</label>
+        <input type="file" name="foto" id="foto" accept="image/*">
+
+
+        <label for="cpf"> CPF</label>
+        <input type="text" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+
+        <button type="submit" >Enviar</button>
+        
+        <button type="reset">Limpar</button>
+
+        <button type="button">Não faz nada</button>
+    </form>
+
+</body>
+
+</html>
