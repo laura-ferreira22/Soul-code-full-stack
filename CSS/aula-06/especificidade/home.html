@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade</title>
+    <link rel="stylesheet" href="externo.css">
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    
+    <main>
+        <section>
+
+            <style>
+                h2.titulo#titulo{
+                    color: cyan;
+                }
+            </style>
+            <!--inline tem maior especificidade entre os tipos de CSS-->
+            <h2 class="titulo" id="titulo" style="color: yellow;">Especificidade</h2>
+            <p>
+                Quanto mais específico for o seletor, maior a prioridade que ele terá sobre os outros.
+                A especificidade é calculada com base no tipo de seletor utilizado:
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>
