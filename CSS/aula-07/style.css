@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#name{
+    color: gold;
+    background-color: #111111;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+#rgb{
+    color: rgb(0, 255, 0);
+     background-color: rgba(17, 0, 255);
+     font-family: 'Poppins', sans-serif;
+     font-size: 2rem;
+    font-style: oblique; 
+    /* melhor usar o italic */
+}
+
+#hexa{
+    color: #0000FF;
+    background-color: #FF0000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+}
+
+#alpha{
+    /* color: #00000079; */
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 255, 106, 0.274);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 200%;
+    font-weight: 100;
+}
