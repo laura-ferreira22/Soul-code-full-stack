@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    
+}
+
+h1{
+    text-transform:lowercase;
+}
+
+h1:hover{
+    color: #ffe4ec; /* Cor rosa claro ao passar o mouse */
+    transition: color 0.3s; /* Transição suave */
+    text-shadow: 2px 2px 4px #f8bbd0;
+
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+header{
+    background-color: #4caf50;
+    display: flex;
+    justify-content: space-between; /* Espaço entre o h1 e os links */
+    align-items: center; /* Alinha horizontalmete no centro */
+    padding: 20px; /* Espaço interno */
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+  color: #f8bbd0;
+}
+
+a:active {
+  color: #1b5e20;
+}
+
+#containerServiços{
+    border-radius: 8px; 
+    padding: 10px; /* Espaço interno */
+
+}
+
+#containerConteudo section{
+    background-color: #fff9f05d;
+    border-radius: 8px;
+    padding: 10px; /* Espaço interno */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+}
+
+#containerServiços:hover{
+    border-radius: 5px; 
+    background-color:#ffe4ec9a;
+    transition-duration: 0.5s;
+    box-shadow: 0px 6px 15px#f8bbd0;
+}
+
+body{
+    width: 100%;
+    max-width: 1400px; /* Largura máxima do body */
+    background: linear-gradient(to bottom right, #fff9f0, #e0f2f1, #ffe4ec);
+    color: #2e7d32;
+    margin: 0 auto; /* Remove a margem padrão do body */
+    padding: 15px; /* Espaço interno do body */
+    box-sizing: border-box; 
+}
+
+#containerConteudo h2:hover {
+  color: #4caf50;
+  transition: color 0.3s;
+  text-shadow: 2px 2px 4px  #1b5e20;
+}
+
+#containerConteudo{
+  display: flex;
+  gap: 40px; /* espaço entre tabela e imagens */
+  align-items: flex-start /* alinha pelo topo */
+}
+
+#imagensContainer img {
+  margin-right: 10px;
+  transition: box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+#imagensContainer img:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* sombra suave */
+}
+
+li{
+    display: inline;
+    margin-right: 20px;
+}
+
+h1
+p {
+    font-size: 18px;
+}
+
+table {
+    border-collapse: collapse; /* Remove espaçamento entre bordas das células */
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #2e7d32;
+    padding: 8px;
+    text-align: left;
+  }
+
+    th:hover, td:hover {
+    background-color: #a5af9a; /* cor de fundo ao passar o mouse */
+    cursor: pointer; /* deixa o cursor  mãozinha”*/
+    text-shadow: #1b5e20;
+    border-radius: 0px; /* remove o arredondamento ao passar o mouse */
+    }
+
+footer{
+    background-color: #74f879;
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+

@@ -21,15 +21,15 @@ p {
     color: orange;
 }
 
-.link:focus {
+a:focus {
     font-weight: bold;
 }
 
-.link:hover {
+a :hover {
     color: darkblue;
 }
 
-.link:active {
+a:active {
     color: red;
 }
 
