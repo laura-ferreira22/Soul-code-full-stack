@@ -1,0 +1,33 @@
+#caixa{
+    background-color: tomato;
+    display: block;
+    width: 100%;
+    max-width: 1400px; /* largura máxima */
+    min-width: 320px; /* largura mínima */
+
+    /* max-height:  e min-height: 100px; */
+    /* altura máxima e mínima */
+
+    height: 300px;
+    padding: 20px 40px; /*sentido horário* tanto padding quanto margin */
+    margin: 0px auto; /* (auto)centraliza o bloco horizontalmente */
+    border: 10px dashed black;
+     
+
+
+}
+*{
+    box-sizing: border-box; 
+
+    /* esse é o padrão, mas é bom deixar explícito e adapta o tam total da div*/
+
+    /* content-box é baseada no conteúdo */
+    
+}
+
+#caixa a{
+    /* height: 20px;
+    width: 150px; */
+    display: inline;
+    background-color: #0a8b26;
+}
