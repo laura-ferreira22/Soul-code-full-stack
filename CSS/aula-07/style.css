@@ -7,6 +7,7 @@
     font-size: 50px;
     font-style: italic;
     font-weight: lighter;
+    text-decoration: overline;
 }
 
 #rgb{
@@ -15,14 +16,22 @@
      font-family: 'Poppins', sans-serif;
      font-size: 2rem;
     font-style: oblique; 
+    text-transform: capitalize;
+    text-decoration: underline;
     /* melhor usar o italic */
 }
 
 #hexa{
-    color: #0000FF;
-    background-color: #FF0000;
+    color: #d2d2f0;
+    background-color: #a11a1a;
     font-family: 'Montserrat', sans-serif;
     font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.2;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    /* esse é o line-height recomendado, mas ele não serve para aumentar o bloco e sim a distância da linha */
 }
 
 #alpha{
@@ -32,4 +41,7 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 200%;
     font-weight: 100;
+    text-transform: lowercase;
+    text-decoration: line-through;
+    text-align: center;
 }
