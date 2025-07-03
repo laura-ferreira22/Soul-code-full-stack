@@ -3,6 +3,7 @@
 *{
     font-family: 'Montserrat', sans-serif;
     border-radius: 8px;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
     
 }
 
@@ -28,6 +29,10 @@ header{
     align-items: center; /* Alinha horizontalmete no centro */
     padding: 20px; /* Espaço interno */
 }
+ .secao{
+  margin: 10px;
+  
+ }
 
 a{
     text-decoration: none;
@@ -74,7 +79,13 @@ body{
     padding: 15px; /* Espaço interno do body */
     box-sizing: border-box; 
 }
-
+img{
+  width: 100%;
+  max-width: 200px;
+  height: auto; /* Mantém a proporção da imagem */
+  max-height: 300px;
+  border-radius: 10px; /* Arredondamento das bordas */
+}
 #containerConteudo h2:hover {
   color: #4caf50;
   transition: color 0.3s;
@@ -88,7 +99,7 @@ body{
 }
 
 #imagensContainer img {
-  margin: 11px;
+  margin:10px;
   transition: box-shadow 0.3s ease;
   border-radius: 10px;
 }
@@ -102,7 +113,6 @@ li{
     margin-right: 20px;
 }
 
-h1
 p {
     font-size: 18px;
 }
@@ -126,6 +136,7 @@ table {
     }
 
 footer{
+    margin-top: 10px;
     background-color: #74f879;
     color: white;
     text-align: center;

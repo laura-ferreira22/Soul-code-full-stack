@@ -1,0 +1,45 @@
+.caixa{
+    width: 600px;
+    height: 400px;
+    margin: 40px auto;
+}
+
+.azul{
+    background: radial-gradient( #00f, #0ff);
+    box-shadow: 0px 8px 15px 5px #00000034;
+    
+
+}
+
+.gradiente{
+    background: linear-gradient(45deg, #00f, #0ff);
+    /* ferramenta CSS gradiente no google */
+}
+
+.imagem{ 
+    width: 100%;
+    background-color: orange;
+    background-image: url(./image.png);
+    /* da pra usar linear gradiente no background-image*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* efeito paraliex pesquisar */
+}
+
+.quadrado{
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+    border: 1px solid grey;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: spin 2s linear infinite;
+}
+/* Ferramenta de animação CSSloader */
+@keyframes spin{
+    to{
+        transform: rotate(1turn);
+    }
+}
+    
