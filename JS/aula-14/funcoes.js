@@ -34,4 +34,55 @@ function buscarTodosProdutos() {
 let produtos = buscarTodosProdutos();
 console.log(produtos);
 
+// Função com valor padrão de parâmetro
+function calcularPotencia(base = 0, expo = 1) {
+    let potencia = base ** expo;
+    return potencia;
+}
 
+let potencia = calcularPotencia(5, 2);
+console.log(potencia);
+
+// Funções Anônimas
+const somar = function (n1, n2) {
+    let soma = n1 + n2;
+    return soma;
+}
+
+console.log(somar(12, 8)); // 20
+
+
+// Funções de seta (Arrow Functions)
+
+const subtrair = (n1, n2) => n1 - n2;
+
+let resultado = subtrair(15, 9);
+
+console.log(resultado); // 6
+
+const quadrado = n => n**2;
+
+console.log(quadrado(8)); // 64
+
+// Função de callback
+
+setTimeout(() => {
+    console.log("Acabou o tempo.");
+}, 3000);
+
+setInterval(() => {
+    console.log("Passou 4 segundos.");
+}, 4000);
+
+console.log("Final do código.");
+
+// Função SIM/NÃO numero Par
+
+function verificarPar(numero) {
+    if (numero % 2 == 0) {
+        return "SIM";
+    }
+    return "NÃO";
+}
+
+console.log(verificarPar(16));
