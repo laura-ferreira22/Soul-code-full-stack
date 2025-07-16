@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Lâmpada</title>
+
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .janela {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lampada {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        #btnLigarDesligar img {
+            width: 60px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #btnLigarDesligar img {
+            background-color: transparent;
+            border: none;
+        }
+
+
+
+    </style>
+</head>
+
+<body style="background-color: #262626;">
+
+    <div class="janela">
+        <img id="lampada" class="lampada" src="./images/lampada-apagada.png" alt="Lâmpada Acesa/Apagada">
+
+         <button id="btnLigarDesligar"><img src="./images/on.png" alt=""></button>
+    </div>
+
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
