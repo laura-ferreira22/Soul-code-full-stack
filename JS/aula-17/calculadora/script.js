@@ -9,14 +9,12 @@ const btnSomar = document.querySelector('#btnSomar');
 btnSomar.addEventListener('click', () => {
     const n1 = Number(num1.value);
     const n2 = Number(num2.value);
-
-   if (isNaN(n1) || isNaN(n2)) {
-     resultado.classList.remove("d-none");
+    const soma = n1 + n2;
+    
+   if (Number.isNaN(soma)) {
      resultado.innerHTML = "Por favor, insira números válidos.";
    } else {
-     const soma = n1 + n2;
-     resultado.classList.remove("d-none"); // acessa e modifica a class de resultado
      resultado.innerHTML = `Resultado: ${soma}`;
    }
-
+   resultado.classList.remove("d-none"); // acessa e modifica a class de resultado
 })
