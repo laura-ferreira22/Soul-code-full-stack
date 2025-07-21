@@ -6,7 +6,7 @@ function preencherNaTela(dados){
 }
 
 const cidades = document.querySelector("#cidades")
-const urlCidades = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/SP/municipios'
+const urlCidades = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/BA/municipios'
 
 async function buscarDadosIBGE(){
     try {

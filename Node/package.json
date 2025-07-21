@@ -1,0 +1,15 @@
+{
+  "name": "estoque",
+  "version": "1.0.0",
+  "description": "Sistema de controle de estoque ",
+  "license": "ISC",
+  "author": "Laura Ferreira",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
