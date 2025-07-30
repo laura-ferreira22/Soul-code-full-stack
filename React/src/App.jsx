@@ -1,16 +1,24 @@
-import './App.css'
-import Footer from './components/Footer/Footer'
-import Header from './components/Header/Header'
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home/Home';
+import Products from './pages/Products/Products';
+import Users from './pages/Users/Users';
 
 
 function App() {
-  return ( // n pode deixar os componentes soltos, tem ficar dentro de uma div ou <>
-    <> 
-      <Header/>
-      <h1>Olá React</h1>
-      <Footer/>
-    </>
-  )
+  return (
+    <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/products' element={<Products />}/>
+            <Route path='/users' element={<Users />}/>
+            <Route path='*' element={<h1>404</h1>} />
+        </Routes>
+    </BrowserRouter>
+     
+
+  );
 }
 
-export default App
+export default App;
