@@ -5,7 +5,10 @@ import "./Products.css";
 import { useEffect, useState } from "react";
 import Table from "../../components/Table/Table";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import api from "../../api/api.js";
+import { useAuth } from "../../context/AuthContext.jsx";
+import { useNavigate } from "react-router-dom";
+import { firebaseUserToken } from "../../firebase/auth.js";
 
 const nomeValid = {
     required: {
@@ -40,16 +43,34 @@ const precoValid = {
 
 export default function Products() {
     const [produtos, setProdutos] = useState([]);
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    
-    function onSubmit(dados) {
-        dados.id = produtos.length
-        setProdutos([...produtos, dados]);
+    const [saving, setSaving] = useState(false);
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const {isAuthenticated } = useAuth();
+    const navigate = useNavigate();
+
+    async function onSubmit(dados) {
+        setSaving(true);
+        try {
+            const token = await firebaseUserToken();
+            await api.post("/produtos", dados, {
+                 headers: {Authorization:token}
+            });
+            reset();
+            buscarProdutos();
+        } catch (error) {
+            window.alert("Houve um erro")   // react hot toast p erro 
+            console.error(error)
+        }
+        
+        setSaving(false);
+        
     }
 
     async function buscarProdutos() {
-        const url = "https://api-nodejs-x5tm.onrender.com/produtos";
-        const response = await axios.get(url);
+        const token = await firebaseUserToken();
+        const response = await api.get("/produtos", {
+            headers: {Authorization:token}
+        });
         const produtos = response.data;
         setProdutos(produtos);
     }
@@ -57,6 +78,11 @@ export default function Products() {
     useEffect(() => {
         buscarProdutos();
     }, []);
+
+
+    if (!isAuthenticated) {
+        navigate("/login");
+    }
 
     return (
         <>
@@ -91,7 +117,7 @@ export default function Products() {
                             </Form.Control.Feedback>
                         </Form.Group>
                     </Row>
-                    <Button type="submit">Cadastrar</Button>
+                    <Button type="submit" disabled = {saving}>{saving ? "Cadastrando...": "Cadastrar"}</Button>
                 </Form>
             </Container>
 

@@ -1,9 +1,7 @@
 import { Table as BootstrapTable } from "react-bootstrap";
 
 export default function Table({ produtos }) {
-  if (produtos.length === 0) {
-    return <p>Nenhum produto disponível no momento.</p>;
-  }
+
 
   return (
     <BootstrapTable striped bordered hover variant="dark">
@@ -21,7 +19,7 @@ export default function Table({ produtos }) {
             <td>{produto.id}</td>
             <td>{produto.nome}</td>
             <td>{produto.quantidade}</td>
-            <td>R$ {produto.preco.toFixed(2)}</td>
+            <td>R$ {produto.preco}</td>
           </tr>
         ))}
       </tbody>
