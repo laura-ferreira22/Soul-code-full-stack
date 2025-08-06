@@ -1,9 +1,12 @@
 import "dotenv/config";
+import cors from "cors";
 import express from "express";
 import produtosRouter from "./routers/produtosRouter.js";
 import usuarioRouter from "./routers/usuarioRouter.js";
 
+
 const server = express();
+server.use(cors({ origin: "*" }));//qualquer site pode acessar as rotas do servidor
 server.use(express.json());// todas as requisições feitas no servidor ele converte p JSON
 
 const port = process.env.PORT || 3000;
